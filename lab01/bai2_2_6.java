@@ -10,19 +10,15 @@ public class bai2_2_6 {
 		
 		do
 	    {
-//	        printf("Hay nhap so luong nguoi choi:\n"); 
 			a = JOptionPane.showInputDialog(null, "Please enter a:", "Please input the first number: ", JOptionPane.INFORMATION_MESSAGE);
-//	        scanf("%d", &*M);
 	        c = Double.parseDouble(a);
 	        if(c <= 0)
 	        {
-//	            printf("Ban da nhap sai (nho hon 0) yeu cau nhap lai.\n");
 	        	JOptionPane.showMessageDialog(null, "Please enter a again: ", Error1, JOptionPane.INFORMATION_MESSAGE);
 	        }
 	    }
 	    while (c <= 0); 
 		
-//		a = JOptionPane.showInputDialog(null, "Please enter a:", "Please input the first number: ", JOptionPane.INFORMATION_MESSAGE);
 		Notification += a + "x + ";
 		
 		b = JOptionPane.showInputDialog(null, "Please enter b:", "Please input the first number: ", JOptionPane.INFORMATION_MESSAGE);
@@ -30,7 +26,6 @@ public class bai2_2_6 {
 		
 		JOptionPane.showMessageDialog(null, Notification, "Show two numbers", JOptionPane.INFORMATION_MESSAGE);
 		
-//		double c = Double.parseDouble(a);
 		double d = Double.parseDouble(b);
 		
 		JOptionPane.showMessageDialog(null, -d / c, "Result", JOptionPane.INFORMATION_MESSAGE);
