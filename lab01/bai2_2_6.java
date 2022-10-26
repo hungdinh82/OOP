@@ -8,16 +8,8 @@ public class bai2_2_6 {
 		String Error1 = "Error\n";
 		double c;
 		
-		do
-	    {
-			a = JOptionPane.showInputDialog(null, "Please enter a:", "Please input the first number: ", JOptionPane.INFORMATION_MESSAGE);
-	        c = Double.parseDouble(a);
-	        if(c <= 0)
-	        {
-	        	JOptionPane.showMessageDialog(null, "Please enter a again: ", Error1, JOptionPane.INFORMATION_MESSAGE);
-	        }
-	    }
-	    while (c <= 0); 
+		a = JOptionPane.showInputDialog(null, "Please enter a:", "Please input the first number: ", JOptionPane.INFORMATION_MESSAGE);
+        c = Double.parseDouble(a);
 		
 		Notification += a + "x + ";
 		
@@ -28,8 +20,18 @@ public class bai2_2_6 {
 		
 		double d = Double.parseDouble(b);
 		
-		JOptionPane.showMessageDialog(null, -d / c, "Result", JOptionPane.INFORMATION_MESSAGE);
+		if (c == 0 & d == 0) {
+			JOptionPane.showMessageDialog(null, "Equation with infinite solutions.", "Result", JOptionPane.INFORMATION_MESSAGE);
+			System.exit(0);
+		}
 		
+		if (c == 0 & d != 0) {
+			JOptionPane.showMessageDialog(null, "The equation has no solution.", "Result", JOptionPane.INFORMATION_MESSAGE);
+			System.exit(0);
+		}
+		
+		JOptionPane.showMessageDialog(null, -d / c, "Result", JOptionPane.INFORMATION_MESSAGE);
+		System.exit(0);
 		
 	}
 }
